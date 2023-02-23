@@ -1,0 +1,67 @@
+
+.main-color{
+    color:#00aba5;
+}
+.gray{
+    color:gray;
+}
+.white{
+    color:#eee;
+}
+.bg-gray{
+    background-color:rgba(0,0,0,.07);
+}
+.font-10{
+    font-size: 10px;
+}
+.font-15{
+    font-size: 15px;
+}
+.font-17{
+    font-size: 17px;
+}
+.font-19{
+    font-size: 19px;
+}
+.font-20{
+    font-size: 20px;
+}
+.font-25{
+    font-size: 25px;
+}
+.font-30{
+    font-size: 30px;
+}
+.font-35{
+    font-size: 35px;
+}
+.font-40{
+    font-size: 40px;
+}
+.font-45{
+    font-size: 45px;
+}
+.font-55{
+    font-size: 55px;
+}
+.font-50{
+    font-size: 50px;
+}
+.font-60{
+    font-size: 60px;
+}
+.font-70{
+    font-size: 70px;
+}
+.font-bold{
+    font-weight: bold;
+}
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
+.display-flex{
+    display: flex;
+}

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="lib.css">
+</head>
+<body >
+    
+    <section class="header my-2">
+
+        <div class=" row display-flex text-left">
+            <div class=" lang-header font-bold">
+                <span class="main-color mx-2 ">عربي</span>
+                <span  class="">English</span>
+            </div>
+            <div class=" number-header col-lg-4 col-sm-3 main-color  font-bold">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAb9JREFUSEu1lV1OwlAQRs9tEB/VFQgrUFcg7AASawJoxBWoKxBXIK5AfKgmYCKuQNgBrkCWwKv8XdNpaWkp0Eq4j03vnJlv5pur2PJRW45PNODjeZ9x+kvgqWGe4vXgv4ksAvzgx27Q3iaQIGA+uFbfAlD6CPg3JAhoWR3gFDv4zm9OAKPdziaQMEC7uh94uttVeRDVwSznk/QjGmBW/O/BnnQxK05lMU+0REzzmJe2XNB87YlEM9kSTlQI8NoAfQX6DvOiLoCW1QcOmYfGzF5mJPBv06qieIY5rVsuVPHEWeU2QWxnCAMXHL3tjPcYG1lKpT5vbxlS0x9gwNg4kW8JzqLRZhmjXjDLVYn1btXR3IgfxkbRg8Rw/CLAzxhP98CoSuF1mHyC8QisdHz0LmpZNeBeZEkNs+IJGzJJ19xKfJHWOH75Np25OrwmpEJdA51Dq8E6xy8HBGUZwLToeSOqyUscv/o9cJrYlv3kzFyDkfEQOUlLHB/vwfF74uauOmjdBtXjvNyV/jjvx3HY8fEAdlhf+4L4JOpErJP4gFlA0TpdQKkc6IwnH3RJDQvh1y85IIGLF1dFwstxft96BX9w3ecZhuHjWwAAAABJRU5ErkJggg=="/>                15084 
+            </div>
+            <div class=" icons-header text-right">
+                <a href="" class="icon-header "> <img  class="icon"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAONJREFUSEvtlMEJwkAQRf8chBztwJSQDtTbLiRgB6YES9AKtARLiBA2OSYVaAnagQWIIxuiBDVuMAlGyJwGdvl//mN2CS0XtayPbhnMhLAvRGsGHALsPH0aRtGkjETlBLn4HsDwSawZA0/KLQPzN5M2Y+BKmQAYawNm3g0syw+C4GxaksqIXCn5IUa0CpVamsT1+W8NPCF8BkbZpETFiRMwa2S60jCO7/1LqI8JitxLcRhw1TdgntZJsAHg5NNnG5TXCcBR91eihVLqUPuh/ecWFWP3CYyvvkdkRPTthcq/aWcNbo7XbBmF188GAAAAAElFTkSuQmCC"/> </a>  
+                <a href="" class="icon-header mx-1"> <img   class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAlVJREFUSEvFVW1u2kAQfWO5MT/JCQo34AYl/7wOSOYEwAmSnKDpCZqcINygK2G8/ld6gtATlBuU/iMo8lTjeJHxB0SRolhCILw7b+bNezOEd37onePj4wEGvt9nxxkTcw+AfDYAVmBeAvgVJYl8Nz6NFYS+33kmegDQB/AvC0q0BHM7B/qSR9Wu50211gJceWoBgiDoOcw/ARCI7qI4vq27fKnUNQHfs6qYR3XVVADCMGw/Pz39kaxTojCO49UxCrJkgBmYP7ue1y1XUgG49H1NRP2UqC/BBRDbbVsnyboJKK/4EYCOjBkVzx0A7A8SfRNa8j48MrBZGNM9Vomli4DR3Bhtzx4ADJS6A3Dlet65lFrgGMQ8nSfJ7BjIQCkGcB8Zc90EkEkuMkaUgwOAUmZ1QAOlDu7LmXIFawKWc2Mm8jKnSBq+iYw5P+X6nIFx8WwFgJlXiyQJbTBbBRPNFnE8PUpRENyC+WtkzD5uGaBSogQcKjVjYCwgn87Obna7XcdhfgCzdluteyvNXIG9yJjO8SYzd8uytAIQukRVBLwEyRUnPwdKyf/aUlzpwZ7zwqUiJTKXQCSutmNCzJj5Zej7E5bRwnxRdHTFaHVKKPOeJQJ03FZrJfRYvwD4bRVYS1FeZkXLJ0eF9APo2moanTxUKmTgBwM3YP4Lx+lTmq6LjbSXs5m13V6BSExFdcHrfJA5uSHjJROtHWZpsuyFzIyyE1zmSdOsOpRpEKw4Tdcy95lomQ27l70gWUpQUY7sA5mwsnT0mxfOKde+9v3H7+TXZtp07j8VSzooTo4MUwAAAABJRU5ErkJggg=="/>  </a> 
+                <a href="" class="icon-header mx-1">   <img  class="icon"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAWlJREFUSEvdlVFOg0AQhv8xTXi0N1BvoCcQ31jEBG9ATyA9ie0J6g0kKbJ9s55Aj9DeoH1sYhgz20VJLUohfYEnwv4z386/swPhyA8dOT86BAg8z2WiCQHnbWxjYEHMg3Q2m0ueb4sCpRYAztokL2IF8qL1xS6A5UNOdJVl2UcTkO/7lyfM7xKbam02X67AAACsCBhMtU4OgdwpFTIwAdD/D2DyEjCaaj2sAwmUGgF4KGsrK2BgSMCjFc97jnOfJMlqHygMw/7nZvMMwJX1cmwlQBasl9IFp2JZTnSzey5W82otWedErmgCpYzVfwJEYHcn53C99YziNMvG8nqrVFyq8q3nOGFRZW1AYUnZXyZ6MizmyK6PU63jsn0HAyTYdogkF8vkWRMQ7eu0RgDJaDwHTAU5EFXdlcaAOu0qmm4D5DIVh1jXkSrdMtXaTOWfWeR5LrZt2HaiLsEc/RrXbbdcFd+hX+axLPoCMmPEGSuFWykAAAAASUVORK5CYII="/> </a>
+                <button class="btn-res-header  ">
+                    احجز موعد 
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="navbar display-flex">
+        <div class="nav">
+            <ul>
+                <li class="mx-1 active-nav ">
+                    <p class="nav-icon text-center">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAFlJREFUSEtjZKAxYKSx+QxEWfD/////2BzCyMhIUD9BBSCDRy0gGM+jQQQOIlzBQDD8cCiAJWF4Mh21AD2khmEQ4UstoxmNYF4aDaKBDyKCLsCjgKg6mRILAAOyUBmRxX4iAAAAAElFTkSuQmCC"/>                    </p>
+                     الرئيسيه
+                </li>
+                <li class="mx-2">
+                    <p class="nav-icon text-center">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAFxJREFUSEtjZKAxYKSx+QyjFhAMYZKC6P////9BJjIyMhKtj2iFIINHLSAYYUMniGAuJeglNAXYUhfWVERzC3C5fOjEwagPkENgcJVFpOYLcMlLjiZS9IxaQDC0AFaEOBlExtG1AAAAAElFTkSuQmCC"/>
+                    </p>
+                    الاخبار
+                </li>
+                <li class="mx-1">
+                    <p class="nav-icon text-center">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAFxJREFUSEtjZKAxYKSx+QyjFhAMYZKC6P////9BJjIyMhKtj2iFIINHLSAYYUMniGAuJeglNAXYUhfWVERzC3C5fOjEwagPkENgcJVFpOYLcMlLjiZS9IxaQDC0AFaEOBlExtG1AAAAAElFTkSuQmCC"/>
+                    </p>
+                    الفروع
+                </li>
+                <li class="mx-1">
+                    <p class="nav-icon text-center">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAFxJREFUSEtjZKAxYKSx+QyjFhAMYZKC6P////9BJjIyMhKtj2iFIINHLSAYYUMniGAuJeglNAXYUhfWVERzC3C5fOjEwagPkENgcJVFpOYLcMlLjiZS9IxaQDC0AFaEOBlExtG1AAAAAElFTkSuQmCC"/>
+                    </p>
+                    تواصل معنا
+                </li>
+
+
+            </ul>
+        </div>
+        <div class="logo">
+            <img cass src="logo.png" alt="">
+        </div>
+    </div>
+
+
+
+    <section class="home">
+        <div class="home-opacity"></div>
+            <div class="content">
+
+                <p>
+                    <span class=" home-title font-bold">انت و </span><span class="main-color  home-title font-bold"> طبيبك </span> 
+                </p>
+                <p  class="gray home-content">
+                    <p class="home-text">
+                        نهتم بالإلتزام وبإحترام كرامة وحقوق المرضى من خلال تقديم الرعاية الطبية
+                    </p>
+                    <p class="home-text">
+                        والخدمات المساندة بشكل إحترافي يضمن رضا العاملين
+                    </p>
+                    <p class="home-text">
+                        , نحرص على أن يتم توفير للعاملين أثناء أداء عملهم بروح جماعية.
+                    </p>
+                </p>
+            </div>
+
+    </section>
+
+    <section class="information">
+        <div class="row display-flex ">
+
+
+            <div class="info-card  my-1  card1-3">
+                <p class="font-bold white text-center ">
+                    العروض والفحوصات
+                </p>
+                <p class=" font-bold mb-5  text-right white">
+                    المكان الوحيد لخدمات الأشعة والمعامل تحت سقف واحد، لا تتردد في التمتع بعروض مصممة خصيصا لدينا للوصول إلى احتياجات صحتك بأسعار مقعوله 
+                </p>
+                <p   class="text-right">
+                    <button class="btn-know-more"  >  اعرف الكثير </button>
+                </p>
+            </div>
+            
+            <div class="info-card my-1   card2-4">
+                <p class="font-bold white text-center ">
+                    قسم الاشعه
+                </p>
+                <p  class=" font-bold mb-5  text-right white">
+                    
+                    يمتلك لايف سكان  قسمًا حديثًا للأشعة والتصوير مجهزًا بأحدث أساليب التصوير. يدار من قبل فريق من أخصائيي الأشعة والتقنيين المتخصصين
+                    
+                </p>
+                <p  class="text-right">
+                    <button class="btn-know-more"  >  اعرف الكثير </button>
+                </p>
+            </div>
+            
+            <div class=" info-card my-1  card1-3">
+                <p class="font-bold white text-center ">
+                    المختبر
+                </p>
+                <p  class=" mb-5 font-bold text-right white">
+                    يلتزم المختبر الحديث في لايف سكان بتزويد المرضى والأطباء بالمعلومات اللازمة لتشخيص الأمراض ومراقبة العلاج وفحص الصحة
+                </p>
+                <p  class="text-right">
+                    <button class="btn-know-more"  >  اعرف الكثير </button>
+                </p>
+            </div>
+            
+            <div class="  info-card my-1 card2-4">
+                <p class="font-bold white text-center ">
+                    تسليم النتائج
+                </p>
+                <p  class=" font-bold mb-5  text-right white">
+                    يمكنك الحصول على نتائج فحوصاتك دون التوجه إلى الفرع سواء عن طريق الاسطوانات المدمجة او البريد الإلكتروني أو مباشرة إلى هاتفك الذكي 
+                </p>
+                <p  class="text-right">
+                    <button class="btn-know-more"  >  اعرف الكثير </button>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="welcomed">
+        <div class="row display-flex text-right date-table-work ">
+
+            <div class=" working-date  bg-gray p-5">
+
+
+                <div class="work-date my-3 font-bold font-19">
+
+                    <div>
+                        <p  class="text-center font-30">
+                            ساعات العمل 
+                        </p>
+                        <p  class="text-center font-bold"> 
+                            جميع الفروع
+                        </p>
+                    </div>
+
+
+                    <div >
+
+                        
+                        <div class="row my-3  ">
+                            <div class="col-2 date-row text-left">
+                                <button class="btn-work-date">حجز</button>
+                            </div>
+                            <div class="col-7 text-center date-row">
+                                من 10 ص الي 11 م
+                            </div>
+                            <div class="col-3 text-right date-row">
+                                السبت
+                            </div>
+                        </div>
+
+                        <div class="row my-3 ">
+                            <div class="col-2 date-row text-left">
+                                <button class="btn-work-date">حجز</button>
+                            </div>
+                            <div class="col-7 text-center date-row">
+                                من 10 ص الي 11 م
+                            </div>
+                            <div class="col-3 date-row">
+                                الاحد
+                            </div>
+                        </div>
+
+                        <div class="row my-3 ">
+                            <div class="col-2 date-row text-left">
+                                <button class="btn-work-date">حجز</button>
+                            </div>
+                            <div class="col-7 text-center date-row">
+                                من 10 ص الي 11 م
+                            </div>
+                            <div class="col-3 date-row">
+                                الاتنين
+                            </div>
+                        </div>
+
+                        <div class="row my-3 ">
+                            <div class="col-2 date-row text-left">
+                                <button class="btn-work-date">حجز</button>
+                            </div>
+                            <div class="col-7 text-center date-row">
+                                من 10 ص الي 11 م
+                            </div>
+                            <div class="col-3 date-row">
+                                الثلاثاء
+                            </div>
+                        </div>
+
+                        <div class="row my-3 ">
+                            <div class="col-2 date-row text-left">
+                                <button class="btn-work-date">حجز</button>
+                            </div>
+                            <div class="col-7 text-center date-row">
+                                من 10 ص الي 11 م
+                            </div>
+                            <div class="col-3 date-row">
+                                الاربعاء
+                            </div>
+                        </div>
+
+                        <div class="row my-3 ">
+                            <div class="col-2 date-row text-left">
+                                <button class="btn-work-date">حجز</button>
+                            </div>
+                            <div class="col-7 text-center date-row">
+                                من 10 ص الي 11 م
+                            </div>
+                            <div class="col-3 date-row">
+                                الخميس
+                            </div>
+                        </div>
+
+                        <div class="row my-3 ">
+                            <div class="col-2 date-row text-left">
+                                <button class="btn-work-date">حجز</button>
+                            </div>
+                            <div class="col-7 text-center date-row">
+                                من 10 ص الي 10 م
+                            </div>
+                            <div class="col-3 date-row">
+                                الجمعه
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class=" text-right welcomed-services">
+
+                <p class=" font-bold font-30 my-5">
+                    مرحباً بكم فى لايف سكان 
+                </p>
+                <p class="font-20 font-bold gray my-5">
+                    معامل لايف سكان هي معامل طبية تقدم خدمات التحاليل والفحوصات المخبرية وفقاً لأعلى معايير الجودة ومع أحدث التقنيات الحديثة المتطورة في مجال المختبرات الطبية و الاشعة التشخيصية .
+                </p>
+
+                <div class="row ">
+
+                    <div class="col-6">
+                        <div class="row">
+
+                            <div class="col-9">
+                                <p class="font-bold text-right ">
+                                    فريق مؤهل
+                                </p>
+                                <p class="font-bold text-right font-17 gray">
+                                    فريق مؤهل له خبرة في التحاليل الطبية يسعدون دائما بخدمتكم 
+                                </p>
+                            </div>
+                            <div class="col-3 ">
+                                <img class="icon-welcome" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAs5JREFUSEuNll1SGkEUhb+L5udNdiCuwGQF6gqiCUOVMFZgBZoVhKwguAKlZEyFMSVZgbgDs4LoDswrsbip7ukZepjGCg/Q1X37/pxz7m0E8xFA7Vd57Q4FNSe5oV0FrwXsZeHbBfAvF64qvhcnfnKhJCrJB4zs1jjpUuNz5ln7NOPh/8b37RxE3lbueE4DUQQDmK3o3g/k17+8DnAAMk66ajJWGvaC8gD0XYHmd9NVbwNJMx5mPFXzLbK2F/KMlYYzfUDp0+qcl9j9nnQRG3DTBXUVHQ2tWDwuF8txcofoduHYZBx5jkNcm4RE+yBZILgj6rzNlJnlXgSQdKQ2ttKzGfvKXVF+nquFFM4MT0Rx4dcLAKRJZm8NymXmbRKI4xACLe53jBayCkoyNgbGb6uT7fveKnpfOvx22WB9/hv4Q9SpZ6dZnAXJaTJVZQeZ7xEdTVdlG9y/utxH9Rr0VqJ4t4Cu1Mlpcg76EfSTRPGgBIsztGPDX+cMXiUDVY4RTml2TgIqct2aEfWTKN7PcawgVSlBIB3dW8mKHEizPclnl4e1Qz1NHoENnmpbHB6aS6VZGIQnvdiF2g2mGVudrDHzyipk/kgGzPVYqA01anc9iny6ynHSZCqwo/CFKO4vpu9SH9i412d1nl6azDeoyQEf2pNnBZSOTkC+WvWszRq87xkEvO4K1ZxfUh55MdvioPcYxGmcvAFuEOoGe5rtSXla5jINsChpMlHlHcKdrM/21ATxWTfOhRugDjLEwbk8jkuNVuLDQPX31dTOJjOadd4zvZENxItdpHbtnP8iaptKqqPeNFqF5Jx948gGeT1F5ttWFkLf2fczncgt67N9C+ES7v4LXOgw/PYKcjXKmqjkRU9pxkVDreqV8jRdftz9aWq0rmsDROvovEvLwRUQSfVFKw2k5SkXgPbZ1q7+eShpdtWzV52sPlnZSx36a/MPfAtGLdEZxSsAAAAASUVORK5CYII="/>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="row">
+
+                            <div class="col-9">
+                                <p class="font-bold text-right ">
+                                    انتشار الفروع 
+                                </p>
+                                <p class="font-bold text-right font-17 gray">
+                                    يوم بعد يوم تمتد وتتسع شبكة ومراكز وفروع لايف سكان .
+                                </p>
+                            </div>
+                            <div class="col-3 ">
+                                <img class="icon-welcome" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAhBJREFUSEudVUtSAjEQfY0MuOQGegM5At4ArJING/BgjgthgRRzBLiBcgRvwNJRNFb3JJNMPkxplkl/3nv9CYEPAVAEgoKSC33kXj9bw+aja69tJI6JqWMEZu0XQXYflyBnq8hpsnFBaGAeM5dU0zqRoFZNpJNorcIYq9C+dj1bg0DLiLiJqzS6QJtI8V+WcwC51ZnZEnA/I68Gfy937bF+noMoFyWN6NMZC5Iqslf3Ih+I893iGOlKYJsP8N17xQ+uQR6DVtwc/NTbSYLs8xaTxbGaG90I5h0YAngHcCXPIpHHIEgmztkOIHbm84auTsJZiscqOQdXdEC3HOGUjUUuk8AG9dqryAfKdRY86qZOwuhOvZ3SwSkrR4rZ8Vkv55jOnuKDxoG2jKxfIxNnlujU34N0kor+UDHyrByJdMGsEMidTHlvyFLRpsniKKPGknxd7oUJN6Gig5LgD0d3//iDafNKgN4OpIakOtrZ6xwB0N9XRS9H0lmm4JH1ZBls84HVtHNA9qFpR/YStyUzMMzObEa7izarMSlVKHiyyEY0azy1QVNrw2xT875ZjXFR7llTV0cLsHVqonMYWTApzqlPyV/R9uOqauDGS6kgNuntF3SRiRO0qXsRPEaYaZt4mzZ+tLPQIyu9ZZcb4S3I/xWw8eEFOZN/slv3VAGbjFPw7ByYfnf9IjUIShQpvvv1/gJz0xsyn0mq8wAAAABJRU5ErkJggg=="/>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="row">
+
+                            <div class="col-9">
+                                <p class="font-bold text-right ">
+                                    خدمة العملاء
+                                </p>
+                                <p class="font-bold text-right font-17 gray">
+                                    نضع نصب أعيننا أولاً خدمة المرضى بطريقة علمية صحيحة وسليمة إلى أن يتماثلوا للشفاء بإذن الله
+                                </p>
+                            </div>
+                            <div class="col-3 ">
+                                <img class="icon-welcome"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAudJREFUSEuNVe1x2kAQfasA/gmpwE4FtisIriCQQczY0kxMGjCuILiC4AYCnrHwDGKCXUFIBZY7SAn6GcdYm7mVdLqTgOT+SLrb24/33q6IADDUIhAYnG3Iw3wXG2VV2MtbsVGxEJ+V88ys8thgWCSxzct/BjCrkcBhwABHIIqQ4B59/0Gq31iDkarOYxGMKcE+1/8M0P0cm5fFfB6wQKMXR2AaoO9FeiuH1yyOlpMWr/eWQNJOGaEVXO8kR92CbR4cgbgN0BDAPgExA5dwvanl00JvPosAPlTZyb6q2cGUet5gJ+GLYAzGBYAYzCfo+7oSi2QKAxanVvnyPUXPG+gK5kEMokcCr7jvXQn4KkiCCxAiuN5xbpu6ylkMb3Oe0nMrGF/C9ccFyTpcBNc/FuMw+KXgAlEXvbP7VPqmuMNgBeC9rXft6AGu19Ffi1kHCUYgPgSy4OGt4uMr4NzAPTvfEGA2BfhTuQeI6Ynrz210B7FF4GLWYeYlgJ9wvTaEeDwCOUzlClRW6QVDgc4T6r/FuR04CyWS5Zhc/60IYa5gJsD1BB2DTgItv7V43VA4NjUHr847nJ6qvWJZZaQzpegVu6sNFWUHYQWmK7jeKPX+j8GSicUMVg0wuztA/TUCqJmqiGNavzlmqcIYiN8nLbw0JiCs4PrXG5vRHnbG5XmgMv5igBJh7XQ1VMtJC+vGDwKO0mbkKfX8gTWLjEm8kTuEwT2AD8ahInmMtXODWqKEcGQBVm7GDNJyzxYwqyxf9lapzksra0A9TrQXWqH23C0Ul8tURytGrmwJFHXVkdJ89lIDVdFp0C+B6Ybcs/PiJ6Zv2dqzlBDejpgxBHFTnJojJBVCoXjCNXreMBecPYt0PrboJdjd3QFqGAFJB4xm6X+QB0g72lB0lYMqFvaOcNPogJw2kBzkswtMT6g9t/HR7nh72JV7qdI429rZJMLu6q0//Z09a2jcnu/VcbIbom2OzP1KJvalv4drUTN/X8t8AAAAAElFTkSuQmCC"/>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-9">
+                                <p class="font-bold text-right ">
+                                    التعاقدات
+                                </p>
+                                <p class="font-bold text-right font-17 gray">
+                                    ان لدينا أكبر شبكة من شركات التأمين والتعاقدات في مصر 
+                                </p>
+                            </div>
+                            <div class="col-3 ">
+                                <img class="icon-welcome" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAllJREFUSEuFVttx20AMXCgFpASnAzsVSK4g8cfxQ2RmXIJTgakKkhI8IzIfZDJxB2E6cDqIOkgFQuZwLxyPlPmjGxwIYIFdUAT1EABeMxSXgDbJ2Rvm5xgyXWjPhYw6gr9eK87ac5d5WUPfAvgAxg0ILwCeUdWHWK7Ov3BWCXLI4jv2E4Ct5LS9C95ME6r9bRFvBdlCZALG4wNAXwCcgPM9zKcJ43FH2DwxcAXwZ5jma4b/coK8NzT0L0x8DZxvJXh4xuMOvPkl7TL1+9UOqTE6H98OoRF5UPqsIy3aaYJRbQsJIqqhDyy7MDYGgeI8CpqaOpSWUScgUBLwgeTGl1tUrafu41U1RSEtIchLD70v6oykeF03AMXXx44VDwHTRAovB1qQtlSY28sEAbntp/UdugmgbTmYTBhaJAA2TieqZMuibA1BBibsyoafRJfPoMDj309KDgnkPQaZhiRyYFdgyNj9A+NtVLWDdoKp34WC5DdL4FqRAUoIgt0PfexbMB5tEWlmOJCpW/7x7SPO/DMlcF12foNuEbsh68Rsl1xzJ7S1C5Bw71n8hKq2C9GLlbcScBXBWotctBamObiuiOQ87e3u6jwyT4eQQCtZ62ptyADZvdTC7H+L/3Dcgd48ArxzoX3rRHShRQKv+wvQVaTjnEUemeq7Yq5eIT6BJ0XSwXc7ILSQDZpYEOm7sBlKbShLQdPQ0zmh58guRvXTYfrD1f7GzSk+K9IPyMDXM+6vpToR0QOb/XOu5CX3V9ZNup59rBS7kg6y/xwLX9GiAPXJErYoyqo/P/8Bk3IqLR0SaEcAAAAASUVORK5CYII="/> 
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

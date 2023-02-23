@@ -1,0 +1,500 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0 10px;
+}
+a{
+    text-decoration: none;
+    list-style: none;
+}
+li{
+    list-style: none;
+}
+.content{
+    text-align: right;
+    padding: 0 10px;
+    right: 10px;
+
+}
+.home-text{
+    font-size: 16px;
+    font-weight: bold;
+}
+.btn-res-header{
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding:  14px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    background-color:#00aba5 !important;
+    color: #eee;
+}
+.icon-header{
+    border: 1px solid #cccccc ;
+    border-radius:50%;
+    padding: 6px;
+}
+.icon-header .icon{
+    position: relative;
+    top: -1px;
+    left: 2px;
+}
+.navbar{
+    background-color: #fff;
+}
+.logo img{
+    width: 200px;
+    height: 100px;
+    
+}
+.logo{
+    justify-content: right;
+    display: flex;
+}
+.navbar .nav ul{
+    display: flex;
+    
+}
+.navbar .nav ul li{
+    font-size: 20px;
+    font-weight: 500;    
+    cursor: pointer;
+}
+.active-nav{
+    background-color: #00aba5;
+    color: #eee;
+    padding: 5px 10px;
+}
+
+
+.carousel-caption{
+    position: absolute;
+    top: 0;
+    color: black;
+    right: 0;
+}
+.carousel-caption .content{
+    position: absolute;
+    width:50%;
+    right: 30%;
+    text-align: right;
+    font-weight: bold;
+    font-size: 30px;
+    width: 35%;
+}
+
+.btn-know-more{
+    background-color:transparent;
+    border: 1px solid #eee;
+    color: #eee;
+    border-radius:3px;
+    padding: 10px;
+    transition: all 0.5s;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.btn-know-more:hover{
+    background-color:#eee;
+    color:#000;
+}
+.card1-3{
+    background:rgba(2, 157, 155, 1);
+    position: relative;
+    border-radius:5px;
+    padding: 40px;
+}
+.card2-4{
+    background:rgba(9, 171, 169, 1);
+    position: relative;
+    border-radius:5px;
+    padding: 40px;
+}
+.information{
+    padding: 0 100px;
+    position: relative;
+    z-index: 22;
+    bottom:60px;
+}
+.icon-welcome{
+    height: 50px;
+    width: 70%;
+}
+.date-row{
+    border-bottom: 1px solid #c0bfbf;
+    padding: 5px;
+}
+.btn-work-date{
+    background-color: #f95759;
+    color:#eee;
+    padding: 2px  5px;
+    transition: all 0.5;
+    border-radius: 5px;
+    border:none;
+    width: 80%;
+}
+.btn-work-date:hover{
+    background-color: #0da8bc;
+}
+.home {
+    background-image:url(hero-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+    background-position: left center;
+    min-height: 100%;
+    position: relative;
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px)  {
+
+    .lang-header{
+        width:20%;
+    }
+    .number-header{
+        width:20%;
+    }
+    .icons-header{
+        width:60%;
+        text-align: left;
+        display: flex;
+        padding: 0;
+    }
+    .btn-res-header{
+        padding: 5px;
+    }
+    .icon-header{
+        border: 1px solid #cccccc;
+        border-radius: 49%;
+        padding: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon-header .icon{
+        position: relative;
+    top: 0px;
+    left: 0px;
+    }
+
+    .logo img{
+        width: 100px;
+        height:50px;
+    }
+    .nav{
+        width: 70%;
+        text-align: left;
+    }
+    .logo{
+        width: 30%;
+    }
+    .navbar .nav ul li{
+        font-size: 16px;
+    }
+    .navbar .nav ul{
+        padding: 0;
+    }
+
+
+    .home-title{
+        font-size: 40px;
+        
+    }
+    .home .content{
+        position: absolute;
+        bottom: 55px;
+    }
+
+    .home-content{
+        color:black !important;
+        font-weight: bold;
+    }
+
+    .home-opacity{
+        position: absolute;
+        background:rgb(0 0 0 / 22%);
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .information {
+        padding: 0  ;
+        position: relative;
+        z-index: 22;
+        display: flex;
+        padding: 10px;
+        bottom: 4px;
+
+    }
+    .card1-3{
+        background:rgba(2, 157, 155, 1);
+        position: relative;
+        border-radius:5px;
+        padding: 20px 13px;
+        
+    }
+    .card2-4{
+        background:rgba(9, 171, 169, 1);
+        position: relative;
+        border-radius:5px;
+        padding: 20px 13px;
+    }
+    .welcomed{
+        display: flex;
+    }
+    .working-date{
+        width: 100%;
+    } 
+    .welcomed-sevices{
+        width: 100%;
+    }
+  }
+
+
+@media only screen and (min-width: 481px ) and (max-width: 768px)  {
+
+    .lang-header{
+        width:30%;
+    }
+    .number-header{
+        width:30%;
+    }
+    .icons-header{
+        width:40%;
+        text-align: left;
+        display: flex;
+        padding: 0;
+    }
+    .btn-res-header{
+        padding: 5px;
+    }
+    .icon-header{
+        border: 1px solid #cccccc;
+        border-radius: 49%;
+        padding: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon-header .icon{
+        position: relative;
+    top: 0px;
+    left: 0px;
+    }
+
+    .logo img{
+        width: 100px;
+        height:50px;
+    }
+    .nav{
+        width: 70%;
+        text-align: left;
+    }
+    .logo{
+        width: 30%;
+    }
+    .navbar .nav ul li{
+        font-size: 16px;
+    }
+    .navbar .nav ul{
+        padding: 0;
+    }
+
+
+
+    .home-title{
+        font-size: 40px;
+        
+    }
+    .home .content{
+        position: absolute;
+        bottom: 55px;
+    }
+
+    .home-content{
+        color:black !important;
+        font-weight: bold;
+    }
+
+    .home-opacity{
+        position: absolute;
+        background:rgb(0 0 0 / 22%);
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .information {
+        padding: 0  ;
+        position: relative;
+        z-index: 22;
+        display: flex;
+        padding: 10px;
+        bottom: 4px;
+
+    }
+    .card1-3{
+        background:rgba(2, 157, 155, 1);
+        position: relative;
+        border-radius:5px;
+        padding: 20px 13px;
+        width: 48%;
+        margin: 0 5px;
+    }
+    .card2-4{
+        background:rgba(9, 171, 169, 1);
+        position: relative;
+        border-radius:5px;
+        padding: 20px 13px;
+        width: 47%;
+        margin: 0 5px;
+    }
+    .welcomed{
+        display: flex;
+    }
+    .working-date{
+        width: 100%;
+    } 
+    .welcomed-sevices{
+        width: 100%;
+    }
+  }
+
+@media only screen and (min-width:769px){
+
+    .home-text{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .lang-header{
+        width:30%;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .number-header{
+        width:30%;
+        justify-content: center;
+        text-align: center;
+        font-size: 20px;
+    }
+    .icons-header{
+        width:40%;
+        text-align: left;
+        display: flex;
+        padding: 0;
+        justify-content: center;
+        justify-content: right;
+    padding: 0 10px;
+    }
+    .btn-res-header{
+        padding: 5px;
+    }
+    .icon-header{
+        border: 1px solid #cccccc;
+        border-radius: 49%;
+        padding: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon-header .icon{
+        position: relative;
+    top: 0px;
+    left: 0px;
+    }
+
+    .logo img{
+        width: 100px;
+        height:50px;
+        display: flex;
+        justify-content: center;
+    }
+    .nav{
+        width: 70%;
+        text-align: left;
+    }
+    .logo{
+        width: 30%;
+        justify-content: right;
+        padding: 0 10px;
+    }
+    .navbar .nav ul li{
+        font-size: 16px;
+    }
+    .navbar .nav ul{
+        padding: 0;
+    }
+
+
+
+    .home-title{
+        font-size: 40px;
+        
+    }
+    .home .content{
+        position: absolute;
+        bottom: 55px;
+    }
+
+    .home-content{
+        color:black !important;
+        font-weight: bold;
+    }
+
+    .home-opacity{
+        position: absolute;
+        background:rgb(0 0 0 / 22%);
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .information {
+        padding: 0  ;
+        position: relative;
+        z-index: 22;
+        display: flex;
+        padding: 10px;
+        bottom: 40px;
+
+    }
+    .card1-3{
+        background:rgba(2, 157, 155, 1);
+        position: relative;
+        border-radius:5px;
+        padding: 20px 13px;
+        width: 25%;
+        height: 320px;
+        font-size: 22px;
+    }
+    .card2-4{
+        background:rgba(9, 171, 169, 1);
+        position: relative;
+        border-radius:5px;
+        padding: 20px 13px;
+        width: 25%;
+        height: 320px;
+        font-size: 22px;
+
+    }
+    .welcomed{
+        display: flex;
+    }
+    .working-date{
+        width: 45%;
+    } 
+    .welcomed-services{
+        width: 50%;
+    }
+}
